@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "FacturacionEntregaProyectoFinalOviedo",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Colecci\u00f3n de pruebas para el endpoint POST de Comprobante",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Comprobante",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente\": {\n    \"clienteid\": 1\n  },\n  \"lineas\": [\n    {\n      \"cantidad\": 1,\n      \"producto\": {\n        \"productoid\": 1\n      }\n    }\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/comprobantes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "comprobantes"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
